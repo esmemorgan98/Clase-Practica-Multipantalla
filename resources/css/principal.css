@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;500&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: rgb(4, 4, 75);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 35px;
+    padding: 40px 0px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: yellow;
+    font-family: 'Give Me The Scoop';
+}
+
+#miMenu {
+    width: 80%;
+    padding: 0%;
+    margin: 0%;
+}
+
+#miMenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;    
+    align-content: center;
+    width: 100%;
+}
+
+#miMenu ul li {
+    list-style: none;
+    margin: 10px 10px;
+    font-family: 'Farro', sans-serif;
+    font-size: 40px;
+}
+
+
+/*stroke*/
+
+
+.stroke nav ul li a {
+    color:yellow;
+    margin:0 15px;
+    font-size:30px;
+    letter-spacing:1px;
+    position:relative;
+}
+
+.stroke nav ul li a:before {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:#974705;
+    top:47%;
+    animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+.stroke nav ul li a:hover:before {
+    animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+@keyframes in {
+    0%{
+      width: 0;
+      left:0;
+      right:auto;
+    }
+    100%{
+      left:0;
+      right:auto;
+      width: 100%;
+    }
+}
+
+@keyframes out {
+    0%{
+      width:100%;
+      left: auto;
+      right: 0;
+    }
+    100%{
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+}
+
+@keyframes show {
+    0%{
+      opacity:0;
+      transform:translateY(-10px);
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+}
+  
+@for $i from 1 through 3 {
+    nav a:nth-child(#{$i}){
+      animation:show 2s #{$i*0.1+1}s ease 1 both;
+    }
+}
+
+
+
+/*stroke*/
+
+
+#sliderImg {
+   text-align: center;
+}
+
+.btn-Toggle {
+    display: none;
+    justify-content: left;
+    padding: 10px 10px;
+    color: white;
+}
+
+body {
+    background: url('../images/background.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(3px);
+}
+
+/* Categorias de Menu**/
+#categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#categorias article{
+    background-color: rgb(224, 224, 224);
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#categorias article img {
+  margin: 6px;
+  display: block;
+  margin-left: auto;  
+  margin-right: auto;  
+}
+
+#categorias article h2{
+    font-family: 'Merienda', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(197, 59, 9);
+}
+
+#categorias article p {
+    color: rgb(24, 7, 1);
+    font-family: 'Tw Cen MT';
+}
+
+
+
+#logo {
+    text-align: center;
+}
+
+#logo figcaption{
+   font-size: 30px;
+   color: cornsilk;
+   font-family: 'Farro', sans-serif;
+}
+
+
+#logo:hover {
+    filter: opacity(.5);
+   justify-content: center;
+}
+
+
+
+
+#dots {
+    text-align: center;
+    color: rgb(4, 4, 75);
+}
+
+
+
+/* Definiendo los media queries para dispositivos Medianos*/
+@media only screen and (max-width: 760px){
+    body {
+        background: rgb(5, 47, 124);
+    }
+
+    /* Coloco miMenu Verticalmente*/
+    header {
+        height: 100%;
+    }
+
+    #miMenu ul {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .btn-Toggle {
+        display: block;
+    }
+
+    #categorias article p {
+        display: none;
+    }
+
+    #quesilloMad figure img {
+        display: none;
+    }
+
+    #canasta figure img {
+        display: none;
+    }
+
+    #frijolesChi figure img {
+        display: none;
+    }
+
+    #frijoles figure img {
+        display: none;
+    }
+
+    #pescado figure img {
+        display: none;
+    }
+
+    #jalapeno figure img {
+        display: none;
+    }
+
+    #indioViejo figure img {
+        display: none;
+    }
+    
+    #lengua figure img {
+        display: none;
+    }
+
+    #lomoSaltado figure img {
+        display: none;
+    }
+    
+    #camarones figure img {
+        display: none;
+    }
+
+    #baho figure img {
+        display: none;
+    }
+
+    #surtido2 figure img {
+        display: none;
+    }
+
+    #dasayunonic figure img {
+        display: none;
+    }
+
+    #dedos figure img {
+        display: none;
+    }
+
+    #nacatamal figure img {
+        display: none;
+    }
+
+    #carneAsada figure img {
+        display: none;
+    }
+
+    #rosquilla figure img {
+        display: none;
+    }
+    
+    #sopaMar figure img {
+        display: none;
+    }
+
+    #sopaRes figure img {
+        display: none;
+    }
+
+    #bebidas figure img {
+        display: none;
+    }
+
+    #bebidas2 figure img {
+        display: none;
+    }
+
+    #bebidas3 figure img {
+        display: none;
+    }
+
+    #leches figure img {
+        display: none;
+    }
+
+    #bunuelo figure img {
+        display: none;
+    }
+
+    #rosquillitas figure img {
+        display: none;
+    }
+
+}
+
+/** Pie de pagina*/
+#infoContact {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(4, 4, 75);
+    color: yellow;
+    font-family: 'Farro', sans-serif;;
+    text-align: center;
+}
+
+#infoContact p {
+  font-family: 'Tw Cen MT';
+}
+
+#social a {
+    color: #FFF;
+
+}
+
+#social {
+    outline:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#social {
+    text-align: center;
+    width: 100%;
+}
+
+#social a {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      border-radius: 5px;
+      background-color: rgb(172, 57, 16);
+}
+
+#social a .fa {
+      color: #FFF;
+}
+
+  
+#social a:hover {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transition:all .2s ease;
+    -webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    z-index: 5;
+}
+
+#social a span {
+    position: absolute;
+    left: 50%;
+    color: #FFF;
+    display: none;
+    border-bottom: 2px solid #38c;
+    padding-bottom: 8px;
+    background-color: rgb(172, 57, 16);
+    top: -30px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 80%;
+    white-space: nowrap;
+}
+
+#social .facebook:hover {
+      background-color: #3b5998;
+}
+
+#social .twitter:hover {
+      background-color: #55acee;
+}
+
+  
+#social .instagram:hover {
+      background-color: #dd39ba;
+}
+
+#social .phone:hover {
+      background-color: #00f050;
+}
+
+#social .mail:hover {
+      background-color: rgb(238, 31, 31);
+}
+
+
+#mapa {
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+
+/* media queries para pantallas pequeñas*/
+@media all and (max-width: 600px){
+    body {
+        background: rgb(5, 41, 109);
+    }
+
+    /* Coloco miMenu Verticalmente*/
+    header{
+        flex-direction: column;
+        height: 100%;
+    }
+    #miMenu ul{
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .btn-Toggle{
+        display: block;
+    }
+
+    /** Slider de Imagenes**/
+    #sliderImg{
+        display: none;
+    }
+   
+    
+    #mapa {
+        display: none;
+    }
+
+}
+
+/********/
+@media only screen and (max-width: 600px) and (orientation: landscape){
+    body{
+        background: rgb(1, 5, 27)
+    }
+}
